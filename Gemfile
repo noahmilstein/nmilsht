@@ -7,6 +7,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'listen'
 group :development, :test do
+  gem 'dotenv-rails'
+  gem 'rb-readline'
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 3.0'
@@ -16,6 +18,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'database_cleaner'
   gem 'launchy', require: false
 end
 

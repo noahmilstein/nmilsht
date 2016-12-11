@@ -1,0 +1,9 @@
+<div class="footer container">
+  <div class="row links text-center" style="margin: 35px">
+    <% if !user_signed_in? %>
+      <p class="sign_in"><%= link_to "Admin Login", new_user_session_path %></p>
+    <% elsif user_signed_in? %>
+      <p class="sign_out"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></p>
+    <% end %>
+  </div>
+</div>

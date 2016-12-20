@@ -4,9 +4,11 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :destroy]
   end
 
-  root "posts#index"
+  root "pages#home"
 
   get '/about', to: 'pages#about'
   get '/resume', to: 'pages#resume'
+  get '/home', to:  'pages#home'
+  get '/contact', to:  'pages#contact'
 
 end

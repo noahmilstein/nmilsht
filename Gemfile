@@ -8,6 +8,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'listen'
 gem 'devise'
+gem 'font-awesome-sass'
 group :development, :test do
   gem 'dotenv-rails'
   gem 'rb-readline'

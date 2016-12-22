@@ -4,6 +4,12 @@
   </div>
 <% end %>
 
+<div id="tag_cloud">
+  <% @tags.each do |tag| %>
+    <%= link_to tag.name + " (#{tag.taggings_count})", tag_path(tag.name) %>
+  <% end %>
+</div>
+
 <form class="navbar-form navbar-left">
   <div class="form-group">
     <input type="text" class="form-control" placeholder="Search">
@@ -14,6 +20,9 @@
 <% @posts.each do |post| %>
   <div class="post_wrapper">
     <h2 class="title"><%= link_to post.title, post %></h2>
+    <p>
+      Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(", ") %>
+    </p>
     <p class="date">Created at: <%= post.created_at.strftime("%B, %d, %Y") %></p>
   </div>
 <% end %>

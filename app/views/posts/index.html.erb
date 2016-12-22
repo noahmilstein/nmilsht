@@ -1,4 +1,4 @@
-<% if user_signed_in? %>
+<% if user_signed_in? && current_user.email == ENV['ADMIN'] %>
   <div class="buttons">
     <button class="button"><%= link_to 'New Post', new_post_path %></button>
   </div>

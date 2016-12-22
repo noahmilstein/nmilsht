@@ -4,3 +4,21 @@
 @import 'bootstrap';
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+#headshot {
+  border-radius: 50%;
+  border: solid;
+  max-width: 150px;
+  height: auto;
+}
+
+#about_shot {
+  border-radius: 50%;
+  border: solid;
+  max-width: 150px;
+  height: auto;  
+}
+
+.email {
+  text-decoration: underline;
+}

@@ -17,12 +17,12 @@
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
 
-<% @posts.each do |post| %>
-  <div class="post_wrapper">
-    <h2 class="title"><%= link_to post.title, post %></h2>
-    <p>
-      Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(", ") %>
-    </p>
-    <p class="date">Created at: <%= post.created_at.strftime("%B, %d, %Y") %></p>
+<div id="posts">
+  <div class="page">
+    <%= render @posts %>
   </div>
-<% end %>
+</div>
+
+<br>
+
+<%= paginate @posts %>

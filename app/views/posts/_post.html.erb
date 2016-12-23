@@ -1,0 +1,27 @@
+<div class="post">
+  <h2 class="title"><%= link_to post.title, post %></h2>
+  <p>
+    Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(", ") %>
+  </p>
+  <p class="date">Created at: <%= post.created_at.strftime("%B, %d, %Y") %></p>
+
+  <!-- <td><%= post.title %></td> -->
+  <!-- <td><%= post.body %></td> -->
+  <!-- <td><%= link_to 'Show', post %></td> -->
+  <% if user_signed_in? && current_user.email == ENV['ADMIN'] %>
+    <p>
+      <%= link_to 'Edit', edit_post_path(post) %>
+      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
+  <% end %>
+</div>
+
+<!-- <% @posts.each do |post| %>
+  <div class="posts">
+    <h2 class="title"><%= link_to post.title, post %></h2>
+    <p>
+      Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(", ") %>
+    </p>
+    <p class="date">Created at: <%= post.created_at.strftime("%B, %d, %Y") %></p>
+  </div>
+<% end %> -->

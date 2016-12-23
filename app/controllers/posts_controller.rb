@@ -2,7 +2,10 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    if params[:tag]
+    if params[:search]
+      @posts = Post.where('title ILIKE ?', "%#{params[:search]}%").order('created_at DESC')
+      @posts = Kaminari.paginate_array(@posts).page(params[:page]).per(5)
+    elsif params[:tag]
       @posts = Post.tagged_with(params[:tag]).order('created_at DESC').page(params[:page]).per(5)
     else
       @posts = Post.all.order('created_at DESC').page(params[:page]).per(5)
@@ -50,6 +53,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body, :tag_list)
+    params.require(:post).permit(:title, :body, :tag_list, :search)
   end
 end

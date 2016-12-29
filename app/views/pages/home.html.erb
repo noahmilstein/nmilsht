@@ -1,23 +1,16 @@
-<div class="main">
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+    </div>
 
-  <div class="blurb">
-    I'm Noah; bibliophile, audo-didact, lifelong learner. I'm a burgeoning web developer and tech enthusiast with a special interest in behavioral economics, social psychology, scientific epistemology, and moral philosophy. Also barbells are pretty cool.
+    <div id="blurb" class="col-md-6 panel">
+      I'm Noah; bibliophile, audo-didact, lifelong learner. I'm a burgeoning web developer and tech enthusiast with a special interest in behavioral economics, social psychology, scientific epistemology, and moral philosophy/ethics. When I'm neither coding nor reading, I'm liable to be playing with barbells.
+    </div>
+
+    <div class="col-md-3">
+    </div>
   </div>
 
-  <div class="links">
-    <%= link_to '<i id="github" class="icon fa fa-github-square" aria-hidden="true"></i>'.html_safe, "https://github.com/noahmilstein/" %>
-    <%= link_to '<i id="facebook" class="icon fa fa-facebook-square" aria-hidden="true"></i>'.html_safe, "https://www.facebook.com/noah.milstein" %>
-    <%= link_to '<i id="instagram" class="icon fa fa-instagram" aria-hidden="true"></i>'.html_safe, "https://www.instagram.com/n.milsht/" %>
-    <%= link_to '<i id="linkedin" class="icon fa fa-linkedin-square" aria-hidden="true"></i>'.html_safe, "https://www.linkedin.com/in/noah-milstein" %>
-    <%= link_to '<i id="stack-overflow" class="icon fa fa-stack-overflow" aria-hidden="true"></i>'.html_safe, "http://stackoverflow.com/users/5822806/n-milsht" %>
-  </div>
-
-  <div class="login">
-    <% if !user_signed_in? %>
-      <p class="sign_in"><%= link_to "Admin Login", new_user_session_path %></p>
-    <% elsif user_signed_in? %>
-      <p class="sign_out"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></p>
-    <% end %>
-  </div>
+  <%= render 'footer' %>
 
 </div>

@@ -12,31 +12,55 @@
   </head>
 
   <body>
-    
-    <% flash.each do |name, msg| %>
-      <%= content_tag(:div, msg, class: "alert") %>
-    <% end %>
-
-    <div class="name">
-      <% if current_page?(about_path) %>
-        <%= image_tag "about_shot.jpg", id: "about_shot" %>
-      <% else %>
-        <%= image_tag "headshot.jpg", id: "headshot" %>
-      <% end %>
-      <p>Noah Milstein</p>
-      <p>Ahoj hoj, Internet</p>
+    <div id="message">
+      <div style="padding: 5px;">
+        <div id="inner-message" class="alert alert-error">
+          <% flash.each do |name, msg| %>
+            <%= content_tag(:div, msg, class: "alert") %>
+          <% end %>
+        </div>
+      </div>
     </div>
 
-    <div class="nav">
-      <%= link_to "Home", root_path %> /
-      <%= link_to "About", about_path %> /
-      <%= link_to "Blog", posts_path %> /
-      <%= link_to "Tech Resume", resume_path %> /
-      <a href="http://www.bostonstrengthcoach.com/">S&C Coaching</a> /
-      <%= link_to "Contact Me", contact_path %>
-    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+        </div>
 
-    <%= yield %>
+        <div class="image col-md-6 text-center">
+          <% if current_page?(about_path) %>
+            <%= image_tag "about_shot.jpg", id: "profile-photo" %>
+          <% else %>
+            <%= image_tag "headshot.jpg", id: "profile-photo" %>
+          <% end %>
+          <p>Noah Milstein</p>
+          <p>Ahoj hoj, Internet</p>
+        </div>
+
+        <div class="col-md-3">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+        </div>
+
+        <div class="col-md-6 text-center panel">
+          <%= link_to "Home", root_path %> /
+          <%= link_to "About", about_path %> /
+          <%= link_to "Blog", posts_path %> /
+          <%= link_to "Tech Resume", resume_path %> /
+          <a href="http://www.bostonstrengthcoach.com/">S&C Coaching</a> /
+          <%= link_to "Contact Me", contact_path %>
+        </div>
+
+        <div class="col-md-3">
+        </div>
+      </div>
+
+      <%= yield %>
+
+    </div>
 
   </body>
 </html>

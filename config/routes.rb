@@ -11,5 +11,4 @@ Rails.application.routes.draw do
   get '/resume', to: 'pages#resume'
   get '/home', to:  'pages#home'
   get '/contact', to:  'pages#contact'
-
 end

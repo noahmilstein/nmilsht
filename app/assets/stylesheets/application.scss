@@ -5,7 +5,11 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-//
+
+.block {
+  display: inline-block;
+}
+
 #message {
     position: fixed;
     top: 0;
@@ -15,7 +19,6 @@
 #inner-message {
     margin: 0 auto;
 }
-//
 
 #profile-photo {
   border-radius: 50%;
@@ -46,15 +49,6 @@ i {
 .col {
   float:left;
 }
-
-// html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-//   border: 0;
-//   font: inherit;
-//   font-size: 100%;
-//   margin: 0;
-//   padding: 0;
-//   vertical-align: baseline;
-// }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;

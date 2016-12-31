@@ -1,9 +1,11 @@
-<div class="post panel panel-body">
-  <div class="row">
-    <h2 class="title"><%= link_to post.title, post %></h2>
+<div class="post panel">
+  <%= link_to post do %>
+  <div class="row panel-body">
+    <h2 class="title"><%= post.title %></h2>
     <p class="date">Created at: <%= post.created_at.strftime("%B, %d, %Y") %></p>
   </div>
-  <p>
+  <% end %>
+  <p class="panel-footer">
     Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(", ") %>
   </p>
 

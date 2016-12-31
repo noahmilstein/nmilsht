@@ -1,20 +1,17 @@
 <div class="container text-center">
 
-<div class="row">
-  <% if user_signed_in? && current_user.email == ENV['ADMIN'] %>
-  <div class="buttons">
-    <button class="button"><%= link_to 'New Post', new_post_path %></button>
-  </div>
-  <% end %>
-</div>
 
 <div class="row">
-  <%= form_tag(posts_path, method: :get) do %>
+  <% if user_signed_in? && current_user.email == ENV['ADMIN'] %>
+    <div class="buttons block">
+      <button class="button"><%= link_to 'New Post', new_post_path %></button>
+    </div>
+  <% end %>
+  <%= form_tag(posts_path, method: :get, class: "block") do %>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", name: nil %>
   <% end %>
 </div>
-
 
 <div id="tag_cloud">
   <% @tags.each do |tag| %>
@@ -22,7 +19,7 @@
   <% end %>
 </div>
 
-<div id="posts">
+<div id="posts" class="transitions-enabled">
   <div class="page">
     <%= render @posts %>
   </div>

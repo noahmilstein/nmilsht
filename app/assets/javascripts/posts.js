@@ -11,3 +11,14 @@ $(document).ready(function() {
     itemSelector: "#posts div.post"
   });
 });
+
+$(document).ready(function() {
+  document.getElementById('tag_button').addEventListener("click", function() {
+    var x = document.getElementById('tag_cloud');
+    if (x.style.display === 'block') {
+      x.style.display = 'none';
+    } else {
+      x.style.display = 'block';
+    }
+  })
+})

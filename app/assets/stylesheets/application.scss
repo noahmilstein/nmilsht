@@ -5,9 +5,21 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+#tag_cloud {
+  display: none;
+}
 
-.block {
-  display: inline-block;
+.toolbar
+{
+  display: table;
+  margin: auto;
+}
+
+.toolbar > div
+{
+  display: table-cell;
+  padding-right: 8px;
+  vertical-align: top;
 }
 
 #message {

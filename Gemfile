@@ -11,6 +11,8 @@ gem 'devise'
 gem 'font-awesome-sass'
 gem 'acts-as-taggable-on', '~> 4.0'
 gem 'kaminari'
+gem 'redcarpet'
+gem 'pygments.rb'
 group :development, :test do
   gem 'dotenv-rails'
   gem 'rb-readline'

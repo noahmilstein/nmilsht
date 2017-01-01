@@ -5,6 +5,15 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+.image {
+  padding-top: 1em;
+  font-family: 'Raleway';
+}
+
+#header {
+  font-family: 'Lobster';
+}
+
 #tag_cloud {
   display: none;
 }
@@ -62,7 +71,7 @@ i {
   float:left;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, hgroup, menu, nav, section {
   display: block;
 }
 

@@ -18,3 +18,5 @@
 
 # Ignore environment variables
 .env
+
+resume.json

@@ -5,10 +5,10 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
-    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Lobster' %>
+    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Lato|Lobster|Raleway|Rokkitt' %>
 
     <%= javascript_include_tag 'application' %>
+
   </head>
 
   <body>
@@ -45,7 +45,7 @@
         <div class="col-md-3">
         </div>
 
-        <div class="col-md-6 text-center panel">
+        <div class="col-md-6 text-center panel" id="header">
           <%= link_to "Home", root_path %> /
           <%= link_to "About", about_path %> /
           <%= link_to "Blog", posts_path %> /
@@ -58,7 +58,9 @@
         </div>
       </div>
 
-      <%= yield %>
+      <div id="app-wrapper">
+        <%= yield %>
+      </div>
 
     </div>
 

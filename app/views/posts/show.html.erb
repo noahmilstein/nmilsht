@@ -12,7 +12,7 @@
   </p>
 
   <p class="body">
-    <%= simple_format(@post.body) %>
+    <%= markdown(@post.body) %>
   </p>
   <div id="comments">
     <h2><%= @post.comments.count %> Comments</h2>

@@ -15,6 +15,11 @@ $(document).ready(function() {
 $(document).ready(function() {
   document.getElementById('tag_button').addEventListener("click", function() {
     var x = document.getElementById('tag_cloud');
+    if (this.innerText === "Show Tags") {
+      this.innerText = "Hide Tags"
+    } else {
+      this.innerText = "Show Tags"
+    }
     if (x.style.display === 'block') {
       x.style.display = 'none';
     } else {

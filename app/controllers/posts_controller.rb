@@ -50,7 +50,6 @@ class PostsController < ApplicationController
       format.html { redirect_to posts_path }
       format.js
     end
-    # redirect_to posts_path
   end
 
   private

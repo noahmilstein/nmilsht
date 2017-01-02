@@ -1,18 +1,17 @@
-
-  <div class="post panel col-md-6">
-    <%= link_to post do %>
-    <div class="row panel-body">
-      <h2 class="title"><%= post.title %></h2>
-      <p class="date">Created at: <%= post.created_at.strftime("%B, %d, %Y") %></p>
-    </div>
-    <% end %>
-    <div class="panel-footer">
-      <p>
-        Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(", ") %>
-      </p>
-      <% if user_signed_in? && current_user.email == ENV['ADMIN'] %>
-        <%= link_to 'Edit', edit_post_path(post), class: "btn btn-default" %>
-        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
-      <% end %>
-    </div>
+<div class="post panel col-md-6">
+  <%= link_to post do %>
+  <div class="row panel-body">
+    <h2 class="title"><%= post.title %></h2>
+    <p class="date">Created at: <%= post.created_at.strftime("%B, %d, %Y") %></p>
   </div>
+  <% end %>
+  <div class="panel-footer">
+    <p>
+      Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(", ") %>
+    </p>
+    <% if user_signed_in? && current_user.email == ENV['ADMIN'] %>
+      <%= link_to 'Edit', edit_post_path(post), class: "btn btn-default" %>
+      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default", remote: true %>
+    <% end %>
+  </div>
+</div>

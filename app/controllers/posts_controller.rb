@@ -11,6 +11,10 @@ class PostsController < ApplicationController
       @posts = Post.all.order('created_at DESC').page(params[:page]).per(5)
     end
     @tags = Post.tag_counts_on(:tags)
+    # respond_to do |format|
+    #   format.html { redirect_to posts_path }
+    #   format.js
+    # end
   end
 
   def new

@@ -14,13 +14,13 @@ $(document).ready(function() {
 
 
 $(document).ajaxSuccess(function() {
-  var pathname = window.location.pathname;
-  console.log(pathname)
-  if (pathname === "/posts") {
+  // var pathname = window.location.pathname;
+  // console.log(pathname)
+  // if (pathname === "/posts") {
     document.getElementById('tag_button').addEventListener("click", function() {
       var x = document.getElementById('tag_cloud');
       this.innerText = (this.innerText === "Show Tags") ? "Hide Tags" : "Show Tags"
       x.style.display = (x.style.display === "block") ? "none" : "block";
     })
-  }
+  // }
 })

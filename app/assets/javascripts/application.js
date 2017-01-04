@@ -15,3 +15,8 @@
 //= require_tree .
 //= require bootstrap-sprockets
 //= require jquery.infinitescroll
+//= require jquery.pjax
+
+$(function() {
+  $(document).pjax('a', '[data-pjax-container]')
+});

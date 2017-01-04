@@ -46,19 +46,19 @@
         </div>
 
         <div class="col-md-6 text-center panel" id="header">
-          <%= link_to "Home", root_path, id: "home-link", remote: true %> /
-          <%= link_to "About", about_path, id: "about-link", remote: true %> /
-          <%= link_to "Blog", posts_path, id: "blog-link", remote: true %> /
-          <%= link_to "Resume", resume_path, id: "resume-link", remote: true %> /
+          <%= link_to "Home", root_path, id: "home-link" %> /
+          <%= link_to "About", about_path, id: "about-link" %> /
+          <%= link_to "Blog", posts_path, id: "blog-link" %> /
+          <%= link_to "Resume", resume_path, id: "resume-link" %> /
           <a href="http://www.bostonstrengthcoach.com/">S&C Coaching</a> /
-          <%= link_to "Contact Me", contact_path, id: "contact-link", remote: true %>
+          <%= link_to "Contact Me", contact_path, id: "contact-link" %>
         </div>
 
         <div class="col-md-3">
         </div>
       </div>
 
-      <div id="app-wrapper">
+      <div id="app-wrapper" data-pjax-container>
         <%= yield %>
       </div>
 

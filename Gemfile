@@ -13,6 +13,7 @@ gem 'acts-as-taggable-on', '~> 4.0'
 gem 'kaminari'
 gem 'redcarpet'
 gem 'pygments.rb'
+gem 'pjax_rails'
 group :development, :test do
   gem 'dotenv-rails'
   gem 'rb-readline'

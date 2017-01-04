@@ -27,12 +27,12 @@
         <div class="col-md-3">
         </div>
 
-        <div class="image col-md-6 text-center">
-          <% if current_page?(about_path) %>
-            <%= image_tag "about_shot.jpg", id: "profile-photo" %>
-          <% else %>
+        <div id="image" class="col-md-6 text-center">
+          <%# if current_page?(about_path) %>
+            <%# image_tag "about_shot.jpg", id: "profile-photo" %>
+          <%# else %>
             <%= image_tag "headshot.jpg", id: "profile-photo" %>
-          <% end %>
+          <%# end %>
           <p>Noah Milstein</p>
           <p>Ahoj hoj, Internet</p>
         </div>
@@ -48,7 +48,7 @@
         <div class="col-md-6 text-center panel" id="header">
           <%= link_to "Home", root_path, id: "home-link", remote: true %> /
           <%= link_to "About", about_path, id: "about-link", remote: true %> /
-          <%= link_to "Blog", posts_path %> /
+          <%= link_to "Blog", posts_path, id: "blog-link", remote: true %> /
           <%= link_to "Resume", resume_path, id: "resume-link", remote: true %> /
           <a href="http://www.bostonstrengthcoach.com/">S&C Coaching</a> /
           <%= link_to "Contact Me", contact_path, id: "contact-link", remote: true %>

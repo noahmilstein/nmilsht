@@ -12,20 +12,15 @@ $(document).ready(function() {
   });
 });
 
-$(document).ready(function() {
-  document.getElementById('tag_button').addEventListener("click", function() {
-    var x = document.getElementById('tag_cloud');
-    //     if (this.innerText === "Show Tags") {
-    //       this.innerText = "Hide Tags"
-    //     } else {
-    //       this.innerText = "Show Tags"
-    //     }
-    this.innerText = (this.innerText === "Show Tags") ? "Hide Tags" : "Show Tags"
-    //     if (x.style.display === 'block') {
-    //       x.style.display = 'none';
-    //     } else {
-    //       x.style.display = 'block';
-    //     }
-    x.style.display = (x.style.display === "block") ? "none" : "block";
-  })
+
+$(document).ajaxSuccess(function() {
+  var pathname = window.location.pathname;
+  console.log(pathname)
+  if (pathname === "/posts") {
+    document.getElementById('tag_button').addEventListener("click", function() {
+      var x = document.getElementById('tag_cloud');
+      this.innerText = (this.innerText === "Show Tags") ? "Hide Tags" : "Show Tags"
+      x.style.display = (x.style.display === "block") ? "none" : "block";
+    })
+  }
 })

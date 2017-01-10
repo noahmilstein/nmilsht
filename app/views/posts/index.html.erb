@@ -2,10 +2,11 @@
 
   <div class="row toolbar">
     <% if user_signed_in? && current_user.email == ENV['ADMIN'] %>
-    <div class="buttons block">
-      <button class="button btn btn-default"><%= link_to 'New Post', new_post_path %></button>
-    </div>
+      <div class="buttons block">
+        <button class="button btn btn-default"><%= link_to 'New Post', new_post_path %></button>
+      </div>
     <% end %>
+
     <div>
       <button id="tag_button" class="btn btn-default">Show Tags</button>
     </div>

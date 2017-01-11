@@ -1,26 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+After cloning the repo, just run the following commands in sequence and you should be good to go.
+```
+bundle install
+rake db:create
+rake db:migrate
+rails s
+```
 
 * Ruby version
+  2.3.1
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# Blog Ror
-Your app description, here.
+# noahmilstein.me
+This is a digital resume site and blog for me to post my code related commentary as I continue to learn and explore. 

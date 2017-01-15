@@ -1,6 +1,8 @@
 # require 'dotenv' # commented out in response to deprecation warning
 
+require 'coveralls'
 require 'database_cleaner'
+Coveralls.wear!('rails')
 
 # Dotenv.load('.env') # commented out in response to deprecation warning
 

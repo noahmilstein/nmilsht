@@ -7,15 +7,15 @@ feature 'blog posts', %Q{
 } do
 
   let!(:user) { FactoryGirl.create(:user) }
-  let(:post) { Post.new(title: "testing posts title", body: "testing posts body, minimum 20 chars") }
-  let(:post2) { Post.new(title: "testing posts edit title", body: "testing posts edit body, minimum 20 chars") }
+  let(:post) { Post.new(title: 'testing posts title', body: 'testing posts body, minimum 20 chars') }
+  let(:post2) { Post.new(title: 'testing posts edit title', body: 'testing posts edit body, minimum 20 chars') }
   let!(:post3) { FactoryGirl.create(:post) }
 
   before :each do
     fill_sign_in_form(user)
   end
 
-  scenario "create blog post" do
+  scenario 'create blog post' do
     fill_sign_in_form(user)
     fill_post_form(post)
 
@@ -23,7 +23,7 @@ feature 'blog posts', %Q{
     expect(page).to have_content(post.body)
   end
 
-  scenario "edit blog post" do
+  scenario 'edit blog post' do
     fill_sign_in_form(user)
     edit_post_form(post3)
 
@@ -31,7 +31,7 @@ feature 'blog posts', %Q{
     expect(page).to have_content(post3.body)
   end
 
-  xscenario "delete blog post" do
+  xscenario 'delete blog post' do
     fill_sign_in_form(user)
     fill_post_form(post)
     visit posts_path

@@ -108,29 +108,29 @@ end
 
 def fill_sign_in_form(user)
   visit new_user_session_path
-  fill_in "Email", with: user.email
-  fill_in "Password", with: user.password
+  fill_in 'Email', with: user.email
+  fill_in 'Password', with: user.password
   click_button 'Log in'
 end
 
 def fill_sign_up_form(user)
   visit new_user_registration_path
-  fill_in "Email", with: user.email
-  fill_in "Password", with: user.password
-  fill_in "Password confirmation", with: user.password
+  fill_in 'Email', with: user.email
+  fill_in 'Password', with: user.password
+  fill_in 'Password confirmation', with: user.password
   click_button 'Sign up'
 end
 
 def fill_post_form(post)
   visit new_post_path
-  fill_in "Title", with: post.title
-  fill_in "Body", with: post.body
-  click_button "Create Post"
+  fill_in 'Title', with: post.title
+  fill_in 'Body', with: post.body
+  click_button 'Create Post'
 end
 
 def edit_post_form(post)
   visit edit_post_path(post)
-  fill_in "Title", with: post.title
-  fill_in "Body", with: post.body
-  click_button "Update Post"
+  fill_in 'Title', with: post.title
+  fill_in 'Body', with: post.body
+  click_button 'Update Post'
 end

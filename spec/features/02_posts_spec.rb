@@ -36,10 +36,10 @@ feature 'blog posts', %Q{
     fill_post_form(post)
     visit posts_path
     # capybara can't find dom element
-    click_link "Destroy"
+    click_link 'Destroy'
 
     expect(page).to not_have_content(post.title)
     expect(page).to not_have_content(post.body)
-    expect(page).to have_content("New Post")
+    expect(page).to have_content('New Post')
   end
 end

@@ -1,6 +1,6 @@
-![Build Status](https://codeship.com/projects/<YOUR_PROJECT_UUID>/status?branch=master)
-![Code Climate](https://codeclimate.com/github/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>.png)
-![Coverage Status](https://coveralls.io/repos/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>/badge.png)
+![Build Status](https://codeship.com/projects/f3f91e80-bced-0134-fdc9-72fc6f63ab32/status?branch=master)
+![Code Climate](https://codeclimate.com/github/noahmilstein/nmilsht.png)
+![Coverage Status](https://coveralls.io/repos/noahmilstein/nmilsht/badge.png)
 
 # README
 

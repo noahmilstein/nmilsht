@@ -16,7 +16,6 @@ feature 'blog posts', %Q{
   end
 
   scenario 'create blog post' do
-    fill_sign_in_form(user)
     fill_post_form(post)
 
     expect(page).to have_content(post.title)
@@ -24,7 +23,6 @@ feature 'blog posts', %Q{
   end
 
   scenario 'edit blog post' do
-    fill_sign_in_form(user)
     edit_post_form(post3)
 
     expect(page).to have_content(post3.title)
@@ -32,7 +30,6 @@ feature 'blog posts', %Q{
   end
 
   xscenario 'delete blog post' do
-    fill_sign_in_form(user)
     fill_post_form(post)
     visit posts_path
     # capybara can't find dom element

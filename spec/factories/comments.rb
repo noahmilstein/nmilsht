@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :comment do
     name "MyString"
-    body "MyText"
+    body "MyText "
     post nil
   end
 end

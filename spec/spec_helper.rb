@@ -134,3 +134,11 @@ def edit_post_form(post)
   fill_in 'Body', with: post.body
   click_button 'Update Post'
 end
+
+def fill_comment_form(post, comment)
+  visit post_path(post)
+  fill_in 'Name', with: comment.name
+  fill_in 'Body', with: comment.body
+  save_and_open_page
+  click_button 'Create Comment'
+end

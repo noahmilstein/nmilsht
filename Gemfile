@@ -16,6 +16,7 @@ gem 'redcarpet'
 gem 'pygments.rb'
 gem 'pjax_rails'
 group :development, :test do
+  gem 'poltergeist'
   gem 'coveralls', require: false
   gem 'dotenv-rails'
   gem 'rb-readline'

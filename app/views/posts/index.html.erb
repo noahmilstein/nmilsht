@@ -10,16 +10,18 @@
     <div>
       <button id="tag_button" class="btn btn-default">Show Tags</button>
     </div>
+
     <%= form_tag(posts_path, method: :get, class: "block") do %>
       <div class="form-group">
         <div class="input-group">
-          <%= text_field_tag :search, params[:search], class: "form-control" %>
+          <%= text_field_tag :search, params[:search], class: "form-control", id: "search" %>
           <span class="input-group-btn">
             <%= submit_tag "Search", name: nil, class: "btn btn-default" %>
           </span>
         </div>
       </div>
     <% end %>
+
   </div>
 
   <div class="row">

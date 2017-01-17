@@ -38,7 +38,7 @@ feature 'blog posts', %Q{
     expect(page).to have_content(post2.body)
   end
 
-  scenario 'search for post title' do
+  xscenario 'search for post title' do
     fill_post_form(post3)
     fill_in 'search', with: post3.title
     click_button('Search')

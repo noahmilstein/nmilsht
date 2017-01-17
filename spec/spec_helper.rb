@@ -129,7 +129,7 @@ def fill_post_form(post)
 end
 
 def edit_post_form(post)
-  visit edit_post_path(post)
+  click_link 'Edit'
   fill_in 'Title', with: post.title
   fill_in 'Body', with: post.body
   click_button 'Update Post'

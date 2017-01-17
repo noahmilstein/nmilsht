@@ -9,19 +9,6 @@ require 'spec_helper'
 require 'rspec/rails'
 require_relative '../spec/support/database_cleaner'
 
-# the below block added for poltergeist
-require "capybara/poltergeist" # Add this line to require poltergeist
-
-# Specs flagged with `js: true` will use Capybara's JS driver. Set
-# that JS driver to :poltergeist
-Capybara.javascript_driver = :poltergeist
-
-# We want to load config from spec/support/database_cleaner.rb, so ensure this line is uncommented
-# in your rails_helper.rb
-Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
-# see this line below "  config.use_transactional_fixtures = false"
-# poltergeist block ends here
-
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -51,8 +38,7 @@ RSpec.configure do |config|
   # examples within a transaction, remove the following line or assign false
   # instead of true.
 
-  # set from true to false for poltergiest
-  config.use_transactional_fixtures = false
+  config.use_transactional_fixtures = true
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and

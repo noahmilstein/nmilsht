@@ -6,6 +6,7 @@ feature 'blog posts', %Q{
   I want to create and delete comments
 } do
 
+  let!(:user) { FactoryGirl.create(:user, email: ENV['ADMIN']) }
   let!(:post) { FactoryGirl.create(:post) }
   let!(:comment) { FactoryGirl.create(:comment, post: post) }
 
@@ -17,7 +18,8 @@ feature 'blog posts', %Q{
     expect(page).to have_content("This is a comment body")
   end
 
-  scenario 'delete post comment', js: true do
+  scenario 'delete post comment' do
+    fill_sign_in_form(user)
     visit post_path(post)
     click_link 'Delete Comment'
 

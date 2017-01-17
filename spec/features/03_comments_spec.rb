@@ -10,6 +10,10 @@ feature 'blog posts', %(
   let!(:post) { FactoryGirl.create(:post) }
   let!(:comment) { FactoryGirl.create(:comment, post: post) }
 
+  before :each do
+    fill_sign_in_form(user)
+  end
+
   scenario 'create post comment' do
     visit post_path(post)
     fill_in 'Name', with: 'comment title'
@@ -19,7 +23,6 @@ feature 'blog posts', %(
   end
 
   scenario 'delete post comment' do
-    fill_sign_in_form(user)
     visit post_path(post)
     click_link 'Delete Comment'
 

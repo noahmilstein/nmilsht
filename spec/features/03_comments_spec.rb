@@ -1,10 +1,10 @@
 require 'spec_helper'
 require 'rails_helper'
 
-feature 'blog posts', %{
+feature 'blog posts', %(
   As an unauthenticated user
   I want to create and delete comments
-} do
+) do
 
   let!(:user) { FactoryGirl.create(:user, email: ENV['ADMIN']) }
   let!(:post) { FactoryGirl.create(:post) }

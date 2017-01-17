@@ -8,16 +8,8 @@ feature 'blog posts', %Q{
 
   let!(:user) { FactoryGirl.create(:user, email: ENV['ADMIN']) }
   let!(:post1) { FactoryGirl.create(:post) }
-  let(:post2) {
-    Post.new(
-      title: 'testing posts title', body: 'testing posts body, minimum 20 chars'
-      )
-    }
-  let(:post3) {
-    Post.new(
-    title: 'testing posts title number 3', body: 'testing posts body number 3, minimum 20 chars'
-    )
-  }
+  let(:post2) { Post.new(title: 'testing posts title', body: 'testing posts body, minimum 20 chars') }
+  let(:post3) { Post.new(title: 'testing posts title number 3', body: 'testing posts body number 3, minimum 20 chars') }
 
   before :each do
     fill_sign_in_form(user)

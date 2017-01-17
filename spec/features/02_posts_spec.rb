@@ -8,7 +8,7 @@ feature 'blog posts', %Q{
 
   let!(:user) { FactoryGirl.create(:user, email: ENV['ADMIN']) }
   let!(:post1) { FactoryGirl.create(:post) }
-  let(:post2) { Post.new(title: 'testing posts title', body: 'testing posts body, minimum 20 chars') }
+  let(:post2) { Post.new(title: 'testing_posts_title', body: 'testing posts body, minimum 20 chars') }
   let(:post3) { Post.new(title: 'testing posts title number 3', body: 'testing posts body number 3, minimum 20 chars') }
 
   before :each do
@@ -38,10 +38,12 @@ feature 'blog posts', %Q{
     expect(page).to have_content(post2.body)
   end
 
-  xscenario 'search for post title' do
+  scenario 'search for post title' do
     fill_post_form(post3)
+    visit posts_path
     fill_in 'search', with: post3.title
     click_button('Search')
+    save_and_open_page
 
     expect(page).to_not have_content(post1.title)
     expect(page).to_not have_content(post2.title)

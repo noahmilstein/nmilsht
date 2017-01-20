@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :comment do
-    name 'MyString'
-    body 'MyText'
+    sequence(:name) { |n| "#{n} name" }
+    sequence(:body) { |n| "comment body string" }
     post nil
   end
 end

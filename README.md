@@ -1,6 +1,6 @@
 ![Build Status](https://codeship.com/projects/f3f91e80-bced-0134-fdc9-72fc6f63ab32/status?branch=master)
 ![Code Climate](https://codeclimate.com/github/noahmilstein/nmilsht.png)
-![Coverage Status](https://coveralls.io/repos/noahmilstein/nmilsht/badge.png)
+[![Coverage Status](https://coveralls.io/repos/github/noahmilstein/nmilsht/badge.svg?branch=master)](https://coveralls.io/github/noahmilstein/nmilsht?branch=master)
 
 # README
 

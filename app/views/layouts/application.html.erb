@@ -12,16 +12,6 @@
   </head>
 
   <body>
-    <div id="message">
-      <div style="padding: 5px;">
-        <div id="inner-message" class="alert alert-error">
-          <% flash.each do |name, msg| %>
-            <%= content_tag(:div, msg, class: "alert") %>
-          <% end %>
-        </div>
-      </div>
-    </div>
-
     <div class="container">
       <div class="row">
         <div id="image" class="col-md-12 text-center">
@@ -41,6 +31,14 @@
           <%= link_to "Resume", resume_path, id: "resume-link" %> /
           <a href="http://www.bostonstrengthcoach.com/">S&C Coaching</a> /
           <%= link_to "Contact Me", contact_path, id: "contact-link" %>
+        </div>
+      </div>
+
+      <div style="padding: 5px;" id="message">
+        <div id="inner-message" class="alert alert-error">
+          <% flash.each do |name, msg| %>
+            <%= content_tag(:div, msg, class: "alert") %>
+          <% end %>
         </div>
       </div>
 

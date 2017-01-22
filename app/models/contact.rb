@@ -5,9 +5,9 @@ class Contact
 
   attr_accessor :name, :email, :message
 
-  validates_format_of :email, :with => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
-  validates_presence_of :message
-  validates_presence_of :name
+  validates :email, format: { with: /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i }
+  validates :message, presence: true
+  validates :name, presence: true
 
   def initialize(attributes = {})
     attributes.each do |name, value|

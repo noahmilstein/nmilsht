@@ -6,9 +6,12 @@ Rails.application.routes.draw do
 
   root "pages#home"
 
+  resources :contacts, only: [:new, :create]
+  # post '/contact', to:  'contact#create'
+  # get '/contact', to:  'contact#new'
+
   get '/tags/:tag', to: 'posts#index', as: :tag
   get '/about', to: 'pages#about'
   get '/resume', to: 'pages#resume'
   get '/home', to:  'pages#home'
-  get '/contact', to:  'pages#contact'
 end

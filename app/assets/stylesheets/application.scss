@@ -7,6 +7,7 @@
 @import "pygments";
 
 .fixed-nav #header {
+  transition: all 0.5s;
   box-shadow: 0 5px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
@@ -26,6 +27,8 @@
 
 #header {
   font-family: 'Lobster';
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #tag_cloud {
@@ -72,7 +75,7 @@ i {
   padding-right: 20px;
 }
 
-.lynda {
+.lynda, .wesbos {
   list-style-type: none;
   margin-left: 10px;
 }

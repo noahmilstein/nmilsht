@@ -6,11 +6,16 @@
 @import "font-awesome";
 @import "pygments";
 
+.contact {
+  margin: 10px;
+}
+
 .fixed-nav #header {
   box-shadow: 0 5px rgba(0, 0, 0, 0.1);
   left: 0;
   position: fixed;
   top: 0;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   width: 100%;
   z-index: 9999;
@@ -257,27 +262,6 @@ section:last-child {
 }
 
 @-webkit-keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes reset {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-moz-keyframes fade-in {
   0% {
     opacity: 0;
   }

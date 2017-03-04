@@ -3,26 +3,26 @@
     I can be reached via email at <mark><a href="mailto:noahamilstein@gmail.com"><span class="email">noahamilstein</span> at <span class="email">gmail</span> <span class="email">dot</span> <span class="email">com</span></a></mark><br>
     Or fill out the form below
   </p>
-</div>
 
-<%= form_for @contact do |f| %>
+  <%= form_for @contact do |f| %>
   <div class="form-inputs">
     <div class="form-group">
       <%= f.label :name %><br>
-      <%= f.text_field :name %>
+      <%= f.text_field :name, class: 'form-control contact-form-input' %>
     </div>
     <div class="form-group">
       <%= f.label :email %><br>
-      <%= f.email_field :email %>
+      <%= f.email_field :email, class: 'form-control contact-form-input' %>
     </div>
     <div class="form-group">
       <%= f.label :message %><br>
-      <%= f.text_area :message %>
+      <%= f.text_area :message, class: 'form-control contact-form-input' %>
     </div>
   </div>
   <div class="form-actions">
-    <%= f.submit %>
+    <%= f.button :submit, class: 'btn btn-default' %>
   </div>
-<% end %>
+  <% end %>  
+</div>
 
 <%= render 'pages/footer' %>

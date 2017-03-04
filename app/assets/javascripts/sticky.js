@@ -1,6 +1,6 @@
 $(window).on('scroll', function() {
   const nav = document.querySelector('#header');
-  if (window.scrollY >= 269) {
+  if (window.scrollY >= 275) {
     document.body.classList.add('fixed-nav');
     document.body.style.paddingTop = nav.offsetHeight + 'px';
   } else {
